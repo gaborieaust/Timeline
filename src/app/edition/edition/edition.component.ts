@@ -24,7 +24,7 @@ export class EditionComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('ID'));
     console.log(productIdFromRoute)
-
+    this.CardList = this.service.getCardsList(productIdFromRoute);
 
 
 

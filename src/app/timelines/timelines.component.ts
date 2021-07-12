@@ -23,7 +23,7 @@ export class TimelinesComponent implements OnInit {
 }
 
   onClick() {
-    let timelineList = this.service.getCardsList(1)
+    let timelineList = this.service.getCardsList
     console.log(timelineList)
     console.log(this.service.getServiceList())
 

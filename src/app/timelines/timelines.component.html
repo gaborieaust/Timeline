@@ -24,7 +24,7 @@
     <th>{{ timeline.updateDate| date:'dd/MM/yyyy hh:mm'  }}</th>
     <th>{{timeline.cardList.length}}</th>
     <th > <a routerLink ='/edit/{{timeline.id}}'> Editer</a></th>
-      <th><a routerLink ='/cards'> Jouer</a></th>
+      <th><a routerLink ='/cards/{{timeline.id}}'> Jouer</a></th>
     <th><button type="Test">Supprimer</button></th>
   </tr>
   </tbody>

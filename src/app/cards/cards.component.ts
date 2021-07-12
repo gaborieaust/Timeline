@@ -29,10 +29,11 @@ export class CardsComponent implements OnInit {
 
 
   ngOnInit() {
-
-
+    // on va chercher l'ID dans l'URL pour aller chercher la timeline
+    const routeParams = this.route.snapshot.paramMap;
+    const productIdFromRoute = Number(routeParams.get('ID'));
     // on récupère déjà toutes les cartes
-    this.service.getCardsList(1).subscribe(cardList => {
+    this.service.getCardsList(productIdFromRoute).subscribe(cardList => {
       // remplir la liste des cartes à deviner
       this.cardstoGuess = cardList;
       // on fait le tirage aléatoire
