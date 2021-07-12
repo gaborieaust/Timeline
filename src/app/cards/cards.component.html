@@ -1,0 +1,49 @@
+<table   class="row" xmlns="http://www.w3.org/1999/html">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form id ="form" (ngSubmit)="onSubmit(f)" #f="ngForm" required minlength="4" class="ng.dirty ng-valid ng touched">
+      <div class="form-group">
+        <label for="date">
+          Veuillez entrer une date
+        </label>
+        <input type="number" id="date" class="form-control" date="date" ngModel name="date" >
+
+        <button class="btn btn-primary" type ="onSubmit">Deviner</button>
+      </div>
+    </form>
+  </div>
+    <p></p>
+
+
+  <div >
+    <h2>{{message}} </h2>
+  </div>
+
+
+
+  <div id="titre1">
+    <h2>Carte à deviner </h2>
+  </div>
+
+
+  <table id ="guessingCard" >
+    <p>{{guessingCard?.description}}</p>
+    <p>{{guessingCard?.name}}</p>
+    <p>{{guessingCard?.date}}</p>
+    <img src="{{guessingCard?.imageUrl}}">
+  </table>
+
+
+<body>
+<div id="testing">
+  <h3>Les cartes qui ont été devinées</h3>
+
+  <ul class="found">
+  <li *ngFor="let guesscard of guesscards">
+    <p>{{ guesscard.description }}</p>
+    <p>{{ guesscard.name }}</p>
+    <p>{{ guesscard.date }}</p>
+    <img src="{{guesscard?.imageUrl}}">
+    </li>
+    </ul>
+</div></body>
+  </table>

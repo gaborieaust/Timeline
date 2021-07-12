@@ -1,0 +1,28 @@
+<h2>Détails du timeline</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>DATE</th>
+    <th>URL d'image</th>
+    <th>Description</th>
+    <th>	Editer ?	</th>
+    <th>	Supprimer ?	</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let Card of CardList |async ">
+    <th>{{ Card.id }}</th>
+    <th>{{ Card.name }}</th>
+    <th>{{ Card.date}}</th>
+    <img src="{{Card.imageUrl}}">
+    <th>{{ Card.description}}</th>
+
+  </tr>
+
+
+
+
+    <th>

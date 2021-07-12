@@ -1,0 +1,35 @@
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Catégorie</th>
+    <th>Date de création</th>
+    <th>Date de mise à jour</th>
+    <th>Nombre de cartes</th>
+    <th>	Editer ?	</th>
+    <th>	Jouer ?	</th>
+    <th>	Supprimer ?	</th>
+  </tr>
+  </thead>
+  <button
+    type="button"
+    (click)="onClick()">BUY</button>
+  <tbody>
+  <tr *ngFor="let timeline of timelineList | async">
+    <th>{{ timeline.id }}</th>
+    <th>{{ timeline.name }}</th>
+    <th>{{ timeline.category}}</th>
+    <th>{{ timeline.creationDate| date:'dd/MM/yyyy hh:mm' }}</th>
+    <th>{{ timeline.updateDate| date:'dd/MM/yyyy hh:mm'  }}</th>
+    <th>{{timeline.cardList.length}}</th>
+    <th> <a routerLink ='/edition'> Editer</a></th>
+    <th>
+      <a routerLink ='/cards'> Jouer</a>
+    </th>
+    <th><button type="Test">Supprimer</button></th>
+  </tr>
+  </tbody>
+  </table>
+
+
