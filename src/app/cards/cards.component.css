@@ -22,10 +22,12 @@ img {
   position:absolute;
   top:15%;
   left:50%;
-  width:300px;
-  margin-left:-150px; /* -largeur/2 */
+  width:200px;
+  margin-left:-100px; /* -largeur/2 */
   margin-top:-10px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  height: 200px;
+
 }
 .found{
   margin: 0 0 2em 0;
@@ -36,13 +38,14 @@ img {
   position: absolute; /* postulat de départ */
   top: 30%; left: 50%; /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
-  max-width:75%;
+  max-width:90%;
   white-space:nowrap;
   width: 100%;
   margin-right: 10%;
   display: flex;
-  flex-wrap: wrap
-
+  flex-wrap: wrap;
+  position: absolute;
+  height: 200px;
 }
 
 

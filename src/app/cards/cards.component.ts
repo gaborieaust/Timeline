@@ -29,8 +29,10 @@ export class CardsComponent implements OnInit {
 
 
   ngOnInit() {
+
+
     // on récupère déjà toutes les cartes
-    this.service.getCardsList().subscribe(cardList => {
+    this.service.getCardsList(1).subscribe(cardList => {
       // remplir la liste des cartes à deviner
       this.cardstoGuess = cardList;
       // on fait le tirage aléatoire
@@ -69,6 +71,7 @@ export class CardsComponent implements OnInit {
       // je réinitialise le form
       form.resetForm(form);
       }
-    }
+
+  }
   }
 

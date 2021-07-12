@@ -23,7 +23,7 @@ import { EditionComponent } from './edition/edition/edition.component';
     RouterModule.forRoot([
       {path:'',component: TimelinesComponent},
       {path:'cards',component: CardsComponent},
-      {path:'edition', component:EditionComponent}
+      {path:'edit/:ID', component:EditionComponent}
     ])
   ],
 
